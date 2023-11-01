@@ -16,7 +16,6 @@ renamed as (
         quantity
 
     from source
-    WHERE shipping_fee != shipping_fee_1
 
 )
 

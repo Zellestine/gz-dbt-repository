@@ -1,4 +1,3 @@
-
 version: 2
 
 sources:
@@ -7,4 +6,22 @@ sources:
     tables:
       - name: sales
         identifier: raw_gz_sales
+        freshness: 
+          warn_after: { count: 90, period: day }
+        loaded_at_field: "CAST(current_timestamp as TIMESTAMP)"
 
+      - name: ship
+        identifier: raw_gz_ship
+        columns: 
+          - name: orders_id
+            tests:
+              - unique:
+                  column_name: "(orders_id || ' - ' || pdt_id)"
+      - name: product
+        identifier: raw_gz_product
+        columns: 
+          - name: products_id
+            tests:
+              - unique
+         
+      
