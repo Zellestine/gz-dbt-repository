@@ -23,5 +23,16 @@ sources:
           - name: products_id
             tests:
               - unique
+
+      - name: adwords
+        identifier: raw_gz_adwords
+      - name: bing
+        identifier: raw_gz_bing
+      - name: criteo
+        identifier: raw_gz_criteo
+      - name: facebook
+        identifier: raw_gz_facebook
+
+        
          
       
