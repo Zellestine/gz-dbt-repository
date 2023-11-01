@@ -1,0 +1,1 @@
+SELECT * FROM rosy-solstice-401504.gz_raw_data.raw_gz_product
